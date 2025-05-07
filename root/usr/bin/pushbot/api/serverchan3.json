@@ -2,7 +2,7 @@
     "_api": "Server3推送post 模板信息 api 文件",
     "_api": "【Server酱3推送】",
 
-    "url": "{sc3_url}",
+    "url": "${sc3_url}.send",
     "data": "@${tempjsonpath}",
     "content_type": "Content-type: application/json;charset=utf-8",
     "str_title_start": "**【",
