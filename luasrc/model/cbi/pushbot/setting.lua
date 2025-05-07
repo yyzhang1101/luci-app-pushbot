@@ -42,6 +42,7 @@ a=s:taboption("basic", ListValue,"jsonpath",translate("推送模式"))
 a.default="/usr/bin/pushbot/api/dingding.json"
 a.rmempty = true
 a:value("/usr/bin/pushbot/api/dingding.json",translate("钉钉"))
+a:value("/usr/bin/pushbot/api/serverchan3.json",translate("server酱3"))
 a:value("/usr/bin/pushbot/api/ent_wechat.json",translate("企业微信"))
 a:value("/usr/bin/pushbot/api/feishu.json",translate("飞书"))
 a:value("/usr/bin/pushbot/api/bark.json",translate("Bark"))
@@ -52,6 +53,14 @@ a:value("/usr/bin/pushbot/api/diy.json",translate("自定义推送"))
 a=s:taboption("basic", Value,"dd_webhook",translate('Webhook'), translate("钉钉机器人 Webhook").."，只输入access_token=后面的即可<br>调用代码获取<a href='https://developers.dingtalk.com/document/robots/custom-robot-access' target='_blank'>点击这里</a><br><br>")
 a.rmempty = true
 a:depends("jsonpath","/usr/bin/pushbot/api/dingding.json")
+
+a=s:taboption("basic", Value,"ss3_sendkey",translate('SendKey'), translate("Server酱3 SendKey").."，<br>调用代码获取<a href='https://sc3.ft07.com/sendkey' target='_blank'>点击这里</a><br><br>")
+a.rmempty = true
+a:depends("jsonpath","/usr/bin/pushbot/api/serverchan3.json")
+
+a=s:taboption("basic", Value,"ss3_uid",translate('UID'), translate("Server酱3 uid"))
+a.rmempty = true
+a:depends("jsonpath","/usr/bin/pushbot/api/serverchan3.json")
 
 a=s:taboption("basic", Value, "we_webhook", translate("Webhook"),translate("企业微信机器人 Webhook").."，只输入key=后面的即可<br>调用代码获取<a href='https://work.weixin.qq.com/api/doc/90000/90136/91770' target='_blank'>点击这里</a><br><br>")
 a.rmempty = true
