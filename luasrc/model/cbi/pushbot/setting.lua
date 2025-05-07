@@ -54,11 +54,7 @@ a=s:taboption("basic", Value,"dd_webhook",translate('Webhook'), translate("钉�
 a.rmempty = true
 a:depends("jsonpath","/usr/bin/pushbot/api/dingding.json")
 
-a=s:taboption("basic", Value,"ss3_sendkey",translate('SendKey'), translate("Server酱3 SendKey").."，<br>调用代码获取<a href='https://sc3.ft07.com/sendkey' target='_blank'>点击这里</a><br><br>")
-a.rmempty = true
-a:depends("jsonpath","/usr/bin/pushbot/api/serverchan3.json")
-
-a=s:taboption("basic", Value,"ss3_uid",translate('UID'), translate("Server酱3 uid"))
+a=s:taboption("basic", Value,"sc3_url",translate('Sc3Url'), translate("Server酱3 API SendUrl").."，<br>调用代码获取<a href='https://sc3.ft07.com/sendkey' target='_blank'>点击这里</a><br><br>")
 a.rmempty = true
 a:depends("jsonpath","/usr/bin/pushbot/api/serverchan3.json")
 

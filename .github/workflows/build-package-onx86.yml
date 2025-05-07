@@ -69,7 +69,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-#        sudo apt-get install -y python3-distutils
 
     - name: Verify installations
       run: |
